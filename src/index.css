@@ -81,10 +81,25 @@
 
   #root {
     min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
   }
 
   #root {
     min-height: 100dvh;
+  }
+
+  #root,
+  .search-bar {
+    display: flex;
+  }
+
+  .search-bar {
+    justify-content: center;
+  }
+
+  body {
+    background-color: #efff9d;
   }
 }
 
@@ -97,5 +112,35 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  .maximum-width {
+    width: 100%;
+  }
+
+  .wide-padding {
+    padding-inline: 3rem;
+  }
+
+  .small-padding {
+    padding-inline: 1.5rem;
+  }
+}
+
+@layer components {
+  input,
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .search-bar {
+    border: 0.1rem solid #89ac46;
+    border-radius: 50px;
+    height: 4.7rem;
+  }
+
+  #root {
+    padding-inline: 11rem;
   }
 }

@@ -3,7 +3,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 function Search() {
   return (
-    <div>
+    <div className="maximum-width search-bar">
       <label className="sr-only" for="site-search">
         Search the pokemon by its name:
       </label>
