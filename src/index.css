@@ -89,13 +89,14 @@
     min-height: 100dvh;
   }
 
-  #root,
-  .search-bar {
+  #root {
     display: flex;
   }
 
   .search-bar {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    padding: 1rem;
   }
 
   body {
@@ -132,6 +133,10 @@
   button {
     border: none;
     background-color: transparent;
+  }
+
+  input:focus-visible {
+    outline: none;
   }
 
   .search-bar {
