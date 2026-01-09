@@ -72,6 +72,14 @@
   }
 }
 
+@layer base {
+  :root {
+    --clr-green-base: #89ac46;
+    --clr-green-light: #d3e671;
+    --clr-green-body: #efff9d;
+  }
+}
+
 @layer layout {
   html,
   body {
@@ -140,10 +148,24 @@
   }
 
   .search-bar {
-    border: 0.1rem solid #89ac46;
+    border: 0.1rem solid var(--clr-green-base);
     border-radius: 50px;
     height: clamp(3rem, 8vw, 4.7rem);
     align-content: center;
+    color: var(--clr-green-base);
+  }
+
+  .search-bar button,
+  .search-bar input {
+    color: var(--clr-green-base);
+  }
+
+  .search-bar button:active {
+    color: var(--clr-green-light);
+  }
+
+  .search-bar button:hover {
+    color: #3a491e;
   }
 
   #root {
