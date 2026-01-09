@@ -95,7 +95,7 @@
 
   .search-bar {
     display: grid;
-    grid-template-columns: 10fr 1fr;
+    grid-template-columns: 1fr auto;
     padding: 1rem;
   }
 
@@ -142,10 +142,29 @@
   .search-bar {
     border: 0.1rem solid #89ac46;
     border-radius: 50px;
-    height: 4.7rem;
+    height: clamp(3rem, 8vw, 4.7rem);
+    align-content: center;
   }
 
   #root {
     padding-inline: 11rem;
+  }
+
+  header {
+    align-content: center;
+    padding: 0;
+  }
+
+  header img {
+    width: auto;
+    height: auto;
+    min-width: 150px;
+    object-fit: contain;
+  }
+
+  @media (width <= 840px) {
+    #root {
+      padding-inline: 5%;
+    }
   }
 }
