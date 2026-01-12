@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-function Search() {
-  function preview() {}
+function Search({ typed, setTyped }) {
+  function preview(e) {
+    setTyped(e.target.value);
+    console.log(typed);
+  }
 
   return (
     <div className="maximum-width search-bar">
