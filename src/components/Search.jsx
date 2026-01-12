@@ -1,9 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { useEffect } from "react";
 
-function Search({ typed, setTyped }) {
-  useEffect(() => {}, [typed]);
+function Search({ setTyped }) {
   function preview(e) {
     setTyped(e.target.value);
   }
