@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-function Search({ setTyped }) {
+function Search({ setTyped, pokemonList }) {
   function preview(e) {
     setTyped(e.target.value);
+    console.log(pokemonList);
   }
 
   return (

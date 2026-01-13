@@ -1,9 +1,10 @@
 import pageLogo from "/images/logo.png";
 import Search from "./components/Search";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
   const [typed, setTyped] = useState("");
+  let pokemonList = useRef([]);
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
@@ -14,7 +15,7 @@ function App() {
           throw new Error("We couldn't fetch the list.");
         }
         const data = await response.json();
-        console.log(data);
+        pokemonList.current = data.results;
       } catch (error) {
         console.log(error);
       }
@@ -28,7 +29,11 @@ function App() {
       <header>
         <img src={pageLogo} className="logo" alt="Simple Pokedex" />
       </header>
-      <Search typed={typed} setTyped={setTyped}></Search>
+      <Search
+        typed={typed}
+        setTyped={setTyped}
+        pokemonList={pokemonList}
+      ></Search>
     </>
   );
 }
