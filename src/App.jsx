@@ -1,6 +1,7 @@
 import pageLogo from "/images/logo.png";
 import Search from "./components/Search";
 import { useState, useEffect, useRef } from "react";
+import Card from "./components/Card";
 
 function App() {
   const [typed, setTyped] = useState("");
@@ -9,7 +10,7 @@ function App() {
     const fetchPokemon = async () => {
       try {
         const response = await fetch(
-          "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0"
+          "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0",
         );
         if (!response.ok) {
           throw new Error("We couldn't fetch the list.");
@@ -34,6 +35,11 @@ function App() {
         setTyped={setTyped}
         pokemonList={pokemonList}
       ></Search>
+      <section className="results-grid">
+        {pokemonList.current.map((pokemon) => {
+          return <Card {...pokemon}></Card>;
+        })}
+      </section>
     </>
   );
 }
