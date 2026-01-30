@@ -184,6 +184,13 @@
     object-fit: contain;
   }
 
+  .pokemon-card {
+    background-color: #fff;
+    border: solid 1px #c0c0c0;
+    width: 358px; /*Temporary*/
+    height: 413px;
+  }
+
   @media (width <= 840px) {
     #root {
       padding-inline: 5%;

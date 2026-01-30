@@ -37,7 +37,15 @@ function App() {
       ></Search>
       <section className="results-grid">
         {pokemonList.current.map((pokemon) => {
-          return <Card {...pokemon}></Card>;
+          if (pokemon.name.includes(typed) === false) {
+            return null;
+          }
+          return (
+            <Card
+              id={pokemon.url.split("/").filter(Boolean).pop()}
+              {...pokemon}
+            ></Card>
+          );
         })}
       </section>
     </>
@@ -45,3 +53,4 @@ function App() {
 }
 
 export default App;
+7;
