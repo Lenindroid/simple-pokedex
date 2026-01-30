@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
 @layer reset {
   *,
   *::before,
@@ -113,6 +115,11 @@
 }
 
 @layer utilities {
+  .font-pixel {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
   .sr-only {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

@@ -3,7 +3,7 @@ import React from "react";
 function Card(props) {
   return (
     <article className="pokemon-card">
-      <h2>{props.name}</h2>
+      <h2 className="font-pixel">{props.name}</h2>
       <img
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${props.id}.png`}
         alt={props.name}

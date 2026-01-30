@@ -17,6 +17,7 @@ function Search({ setTyped, pokemonList }) {
         placeholder="Lapras"
         id="site-search"
         name="q"
+        className="font-pixel"
         onChange={preview}
       />
       <button>
