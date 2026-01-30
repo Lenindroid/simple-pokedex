@@ -185,10 +185,15 @@
   }
 
   .pokemon-card {
-    background-color: #fff;
-    border: solid 1px #c0c0c0;
+    background-color: #f8ed8c;
+    border: solid 10px #ff8989;
     width: 358px; /*Temporary*/
-    height: 413px;
+    height: 358px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    color: #ff8989;
   }
 
   @media (width <= 840px) {
