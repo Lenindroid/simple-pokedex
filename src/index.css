@@ -141,6 +141,11 @@
   .small-padding {
     padding-inline: 1.5rem;
   }
+
+  .results-grid {
+    display: grid;
+    margin-block-start: 10px;
+  }
 }
 
 @layer components {
@@ -192,15 +197,16 @@
   }
 
   .pokemon-card {
-    background-color: #f8ed8c;
-    border: solid 10px #ff8989;
+    background-color: transparent;
+    border: 0.1rem solid var(--clr-green-base);
+    border-radius: 50px;
     width: 358px; /*Temporary*/
     height: 358px;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 10px;
-    color: #ff8989;
+    color: var(--clr-green-base);
   }
 
   @media (width <= 840px) {
