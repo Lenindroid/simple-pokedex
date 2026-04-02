@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Pokedex (Vanilla)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <img src="../public/images/logo.png" class="logo" alt="Simple Pokedex" />
+      </header>
+      <div class="maximum-width search-bar">
+        <label class="sr-only" for="site-search">
+          Search the pokemon by its name:
+        </label>
+        <input
+          type="search"
+          placeholder="Lapras"
+          id="site-search"
+          name="q"
+          class="font-pixel"
+        />
+        <button id="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <section class="results-grid" id="results-grid">
+        <!-- Cards will be populated here -->
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
