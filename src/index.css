@@ -196,6 +196,11 @@
     object-fit: contain;
   }
 
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+
   .pokemon-card {
     background-color: transparent;
     border: 0.1rem solid var(--clr-green-base);
@@ -207,6 +212,8 @@
     text-align: center;
     padding: 10px;
     color: var(--clr-green-base);
+    margin-block: 0.5rem;
+    margin-inline: 0.5rem;
   }
 
   @media (width <= 840px) {
